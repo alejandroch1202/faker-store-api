@@ -1,1 +1,3 @@
-# Web Store Express API
+# Express API
+
+Simple eCommerce backend created with Express
