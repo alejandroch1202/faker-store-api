@@ -55,14 +55,14 @@ router.patch(
   }
 );
 
-router.delete(
-  '/:id',
-  validatorHandler(getUserSchema, 'params'),
-  async (req, res) => {
-    const { id } = req.params;
-    const response = await service.delete(id);
-    res.status(200).json(response);
-  }
-);
+// router.delete(
+//   '/:id',
+//   validatorHandler(getUserSchema, 'params'),
+//   async (req, res) => {
+//     const { id } = req.params;
+//     const response = await service.delete(id);
+//     res.status(200).json(response);
+//   }
+// );
 
 module.exports = router;
