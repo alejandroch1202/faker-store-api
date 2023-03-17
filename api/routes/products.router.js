@@ -10,7 +10,6 @@ const {
 const router = express.Router();
 const service = new ProductsService();
 
-// GET
 router.get('/', async (req, res) => {
   const products = await service.find();
   res.status(200).json(products);
@@ -19,7 +18,6 @@ router.get('/', async (req, res) => {
 router.get(
   '/:id',
   validatorHandler(getProductSchema, 'params'),
-
   async (req, res, next) => {
     try {
       const { id } = req.params;
@@ -31,7 +29,6 @@ router.get(
   }
 );
 
-// POST
 router.post(
   '/',
   validatorHandler(createProductSchema, 'body'),
@@ -42,7 +39,6 @@ router.post(
   }
 );
 
-// PATCH
 router.patch(
   '/:id',
   validatorHandler(getProductSchema, 'params'),
@@ -59,7 +55,6 @@ router.patch(
   }
 );
 
-// DELETE
 router.delete(
   '/:id',
   validatorHandler(getProductSchema, 'params'),
