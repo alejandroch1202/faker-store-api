@@ -4,5 +4,6 @@
       "source": "/api/(.*)",
       "destination": "/api"
     }
-  ]
+  ],
+  "builds":[{"src": "api/index.js"}]
 }
