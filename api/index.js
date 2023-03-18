@@ -20,7 +20,7 @@ const port = process.env.PORT || 3000;
 //   },
 // };
 
-app.get('/', (req, res) => {
+app.get('/api/v1', (req, res) => {
   res.send('Welcome to my first express server');
 });
 
@@ -34,5 +34,5 @@ app.use(boomErrorHandler);
 app.use(errorHandler);
 
 app.listen(port, () => {
-  console.log(`Server running in http://localhost:${port}`);
+  console.log(`Server running in http://localhost:${port}/api/v1`);
 });
