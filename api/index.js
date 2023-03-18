@@ -27,7 +27,7 @@ const html = `<!DOCTYPE html>
     <title>Express</title>
     <style>
       body {
-        background-color: black;
+        background-color: #030303;
         color: white;
         font-family: "Ubuntu", sans-serif;
       }
@@ -38,12 +38,15 @@ const html = `<!DOCTYPE html>
         justify-content: center;
       }
       .div {
+        background-color: black;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        border: 1px solid white;
         border-radius: 15px;
+        -webkit-box-shadow: 0px 0px 18px 7px rgba(15, 15, 15, 1);
+        -moz-box-shadow: 0px 0px 18px 7px rgba(15, 15, 15, 1);
+        box-shadow: 0px 0px 18px 7px rgba(15, 15, 15, 1);
       }
       .header {
         display: flex;
@@ -155,7 +158,7 @@ const html = `<!DOCTYPE html>
           </nav>
         </div>
 
-        <h1>App routes</h1>
+        <h1>Routes</h1>
         <div class="routes">
           <div>
             <p><span class="get"> [ GET ]</span> /api/v1/products</p>
